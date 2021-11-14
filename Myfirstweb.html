@@ -1,0 +1,470 @@
+<html> 
+<head> 
+<meta charset="utf-8">
+<meta http-equiv="x-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> MyfirstWeb </title>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="Myfirstweb.js"></script>
+
+<style>
+*
+{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+body {
+	background: white;
+	background-size: cover;
+	font-family: Gill sans MT;
+	font-size: 18;
+}	
+.menu-bar {
+	background: rgb(0,100,0);
+	text-align: center;
+	height:80px;
+	width:100%;
+}
+label.logo {
+
+	color:white;
+	font-size:25px;
+	line-height:80px;
+	padding: 15px;
+	font-weight: bold;
+	margin-left:65px;
+	
+}
+.menu-bar ul {
+
+	float:right;
+	margin-right:20px;
+	display: inline-flex;
+}
+.menu-bar ul li {
+
+	width:110px:
+	margin:85px;
+	padding:24px;
+}
+.menu-bar ul li a {
+
+	color:  #FFFFFF;
+	padding:7px 13px;
+	font-size:20px;
+}
+.active, .menu-bar ul li:hover {
+
+	background: #426F42;
+	border-radius:38px;
+}
+.sub-menu-1 {
+
+	display:none;
+	text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 {
+
+	display: block;
+	position: absolute;
+	background-color: #426F42;
+	margin-top: 15px;
+	margin-left:-8px;
+	z-index: 1;
+	min-width: 150px;
+	
+}
+.menu-bar ul li:hover .sub-menu-1 ul {
+
+	display:block;
+	margin:15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li {
+
+	width: 200px;
+	padding: 10px;
+	border-bottom: 1px dotted #FFFFFF;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+
+	border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+
+	color: #32CD99;
+	text-align: left;
+}
+.sidebar {
+
+	position: top;
+        margin:-10px;
+	width:250px;
+	height:100%;
+	background:#426F42;
+
+}
+.sidebar header {
+
+	font-size:28px;
+	color: rgb(0,100,0);
+	text-align:left;
+	line-height: 65px;
+	background:white;
+	user-select: none;
+	font-weight: bold;
+	padding-left:20px;
+	margin-top:8px;
+	margin-bottom:6px;
+	
+}
+.sidebar ul a {
+
+	display: block;
+	height:10%;
+	width:100%;
+	line-height:65px;
+	font-size:23px;
+	color: black;
+	font-weight: bold;
+	padding-left:25px;
+	border-top:1px dotted #FFFFFF;
+	border-bottom:1px dotted #000000;
+}
+ul li:hover a {
+
+	padding-left:45px;
+}
+#check {
+
+	display: none;
+}
+label #btn {
+
+	position: absolute;
+	left:50px;
+	top:25px;
+	font-size:25px;
+	color: white;
+}
+.products{
+	position: absolute;
+	margin-left:280px;
+	margin-top:18px;
+
+}
+.card {
+
+	width: 180px;
+	height: 180px;	
+	display: inline-block;
+	border-radius:10px;
+	padding: 35px;
+	box-sizing: border-box;
+	margin: 10px 15px;
+	background-position: center;
+	background-size: cover;
+	transition: transform 0.4s;
+	cursor: pointer;
+}
+.card1{
+	background-image: url(img/strawberry.jpg);
+}
+.card2{
+	background-image: url(img/cocacola.jpg);
+}
+.card3{
+	background-image: url(img/banana.jpg);
+}
+.card4{
+	background-image: url(img/Cabbage_604.jpg);
+}
+.card5{
+	background-image: url(img/carrots-benefits-pin.jpg);
+}
+.card6{
+	background-image: url(img/114833--01--1623926504.jpeg);
+}
+.card7{
+	background-image: url(img/Flour.jpg);
+}
+.card8{
+	background-image: url(img/Mango.jpg);
+}
+.card:hover{
+	transform: translateY(-10px);
+}
+h5{
+	text-align:left;
+	margin-left: 3px;
+	font-weight: bold;
+	font-size: 23px;
+}
+p{	
+	font-weight: bold;
+	font-size: 19px;
+}
+.col-1, .col-5 {
+
+	width:50px;
+	float: left;
+	margin-left: 165px;
+	font-size: 15px;
+	margin-right: 15px;
+}
+.col-2 {
+
+	width:50px;
+	float: left;
+	margin-left: 160px;
+	font-size: 15px;
+}
+.col-3 {
+
+	width:50px;
+	float: left;
+	margin-left: 185px;
+	font-size: 15px;
+}
+.col-4 {
+
+	width:50px;
+	float: left;
+	margin-left: 190px;
+	font-size: 15px;
+}
+.chart {
+
+	width: 110px;
+	height: 150px;	
+	display: inline-flex;
+	border-radius:8px;
+	padding: 85px;
+	box-sizing: border-box;
+	background-position: center;
+	background-size: cover;
+	margin-left:75px;
+	margin-right: 5px;
+	transition: transform 0.4s;
+}
+.chart1{
+	background-image:url(img/Foodgallery.jpg);
+}
+.chart2{
+	background-image: url(img/istockphoto-1203599923-170667a.jpg);
+}
+.chart3{
+	background-image: url(img/Fruits.jpg);
+}
+.chart4{
+	background-image: url(img/chicken.jpg);
+}
+.chart5{
+	background-image: url(img/grain.jpg);
+}
+.chart:hover{
+	transform: translateY(-10px);
+}
+.footer{
+
+	font-family: High tower text;
+	font-weight: bold;
+	font-size: 25px;
+	background-color: rgb(0,100,0);
+	text-align: center;
+	height:75px;
+	padding-top: 18px;
+	margin-top: 20px;
+	box-sizing: border-box;
+}	
+</style>
+</head>
+ 
+<body>
+<!-------------------------------MenuBar----------------------------------->
+<div class="menu-bar">
+<label class="logo">FOOD MART</label>
+	<input type="checkbox" id="check">
+	<label for="check">
+	<i class="fas fa-bars" id="btn"></i>
+</label>
+
+<ul>
+<li><a class= "active" href="#">Home</a></li>
+
+<li><a href="#">Shop</a>
+<div class="sub-menu-1">
+			<ul>
+			<li><a href="#">Add to cart</a></li>
+			<li><a href="#">Price</a></li>
+			</ul>
+</div>
+</li>
+
+<li><a href="#">Services</a>
+<div class="sub-menu-1">
+			<ul>
+			<li><a href="#">Online</a></li>
+			<li><a href="#">Free Delivery</a></li>
+			</ul>
+</div>	
+</li>
+
+<li><a href="#">About us</a>
+<div class="sub-menu-1">
+			<ul>
+			<li><a href="#">Mission</a></li>
+			<li><a href="#">Vision</a></li>
+			<li><a href="#">Team</a></li>
+			</ul>
+</div>	
+</li>
+
+<li><a href="#"></i>Contact us</a>
+<div class="sub-menu-1">
+			<ul>
+			<li><a href="#">Phn.No</a></li>
+			<li><a href="#">Email</a></li>
+			</ul>
+</div>	
+</li>
+ 
+<li><a href="#">My account</a>
+<div class="sub-menu-1">
+			<ul>
+			<li><a href="#">Login</a></li>
+			<li><a href="#">SignUp</a></li>
+			</ul>
+</div>	
+</li>
+
+<li><a href="#">Feedbacks</a>
+<div class="sub-menu-1">
+			<ul>
+			<li><a href="#">Email</a></li>
+			<li><a href="#">Call</a></li>
+			</ul>
+</div>	
+</li>
+</div>
+<!------------------------------SEARCH PRODUCTS---------------------------------->
+
+<div class="products">
+<p>&nbsp; <h1>SEARCH PRODUCTS</h1></p> 
+<hr align="center" width=35% size=7 color= black>
+<div class="col">
+	<div class="card card1" onclick="show_alert('Strawberry')">
+		<h5>Strawberry</h5>
+		<p>250g</p>
+		<p>LKR 600</p>
+	</div>
+
+ 	<div class="card card2" onclick="show_alert('Coca-cola')">
+		<h5>Coca-cola</h5>
+		<p>1.5l</p>
+		<p>LKR 200</p>
+	</div>
+
+	<div class="card card3" onclick="show_alert('Seeni Banana')">
+		<h5>Seeni Banana</h5> 
+		<p>1 Kg</p>
+		<p>LKR 130</p>
+	</div>
+
+	<div class="card card4" onclick="show_alert('Cabbage')">
+		<h5>Cabbage</h5>
+		<p>1 Kg</p>
+		<p>LKR 145</p>
+	</div>
+
+	<div class="card card5" onclick="show_alert('Carrot')">
+		<h5>Carrot</h5>
+		<p>1 Kg</p>
+		<p>LKR 350.00</p>
+	</div>
+
+	<div class="card card6" onclick="show_alert('Milk Shorties')">
+		<h5>Milk Shorties</h5>
+		<p>250g</p>
+		<p>LKR 600</p>
+	</div>
+
+	<div class="card card7" onclick="show_alert('Wheat Flour')">
+		<h5>Wheat Flour</h5>
+		<p>1 Kg</p>
+		<p>LKR 135</p>
+	</div>
+
+	<div class="card card8" onclick="show_alert('Mango')">
+		<h5>Mango</h5>
+		<p>1 Kg</p>
+		<p>LKR 70</p>
+	</div>
+</div>
+</div>
+
+<!------------------------------CATEGORIES---------------------------------->
+
+<div class="sidebar">
+<header>CATEGORIES</header>
+<ul> 
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Vegetables</a></li>
+	<li><a href="#">Fruits</a></li>
+	<li><a href="#">Soft Drinks</a></li>
+	<li><a href="#">Meat</a></li>
+	<li><a href="#">Grains</a></li>
+	<li><a href="#">Biscuits</a></li>
+</ul>
+</div>
+
+<!------------------------------FEATURED PRODUCTS---------------------------------->
+
+<p>&nbsp;<h2 align=center>FEATURED PRODUCTS</h2></p><br><br>
+
+	<div class="col-1">
+	<h2>All</h2>
+	</div>
+
+	<div class="col-2">
+	<h2>Vegetables</h2>
+	</div>
+
+	<div class="col-3">
+	<h2>Fruits</h2>
+	</div>
+
+	<div class="col-4">
+	<h2>Meat</h2>
+	</div>
+
+	<div class="col-5">
+	<h2>Grains</h2>
+	</div>
+
+<br>&nbsp;&nbsp;
+    <div class="col">
+	<div class="chart chart1">
+	</div>
+ 	<div class="chart chart2">
+	</div>
+	<div class="chart chart3">
+	</div>
+ 	<div class="chart chart4">
+	</div>
+	<div class="chart chart5">
+	</div>
+   </div>
+
+<!------------------------------FOOTER---------------------------------->
+<div class="footer">
+ 	&copy; All Rights Reserved
+</div>
+
+</body>
+</html>
